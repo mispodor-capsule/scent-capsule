@@ -1,68 +1,52 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>Scent Capsule | 香りくじ体験</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #f4fdfc;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 2.2em;
-      color: #3a6e68;
-    }
-    p {
-      font-size: 1.1em;
-      color: #555;
-    }
-    .popup-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 30px;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: white;
-      background-color: #ffa726;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .popup-button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
-    .popup-button:active {
-      transform: translateY(0px);
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>香りくじを開ける</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f5f5f5;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #a8dadc;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <h1>カプセルを開ける</h1>
+    <p>どの香りが届くかは、開けてからのお楽しみ。</p>
+    <button onclick="openRandomCapsule()">カプセルを開ける</button>
 
-  <h1>🌿 Scent Capsule｜香りくじ体験 🌿</h1>
-  <p>今のあなたにぴったりの香りは…？<br>カプセルを開けて、今日の香りと出会ってみましょう。</p>
-
-  <button class="popup-button" onclick="openRandomLink()">香りくじを引いてみる</button>
-
-  <script>
-    function openRandomLink() {
-      const links = [
-        "https://www.notion.so/Capsule-01-1e71ff855b80800095f0d9db4e0b5aee?pvs=4",
-        "https://www.notion.so/Capsule-02-1e71ff855b8080328642e301d2d475ec?pvs=4",
-        "https://www.notion.so/Capsule-03-1e71ff855b8080f9b9fbd6920e280808?pvs=4",
-        "https://www.notion.so/Capsule-04-1e71ff855b808001803bfd760b9c32f6?pvs=4",
-        "https://www.notion.so/Capsule-05-1e71ff855b808000897bdd587f3aa48c?pvs=4"
-      ];
-      const randomIndex = Math.floor(Math.random() * links.length);
-      window.location.href = links[randomIndex];
-    }
-  </script>
-
+    <script>
+        const urls = [
+            "https://www.notion.so/Capsule-01-1e71ff855b80800095f0d9db4e0b5aee?pvs=4",
+            "https://www.notion.so/Capsule-02-1e71ff855b8080328642e301d2d475ec?pvs=4",
+            "https://www.notion.so/Capsule-03-1e71ff855b8080f9b9fbd6920e280808?pvs=4",
+            "https://www.notion.so/Capsule-04-1e71ff855b808001803bfd760b9c32f6?pvs=4",
+            "https://www.notion.so/Capsule-05-1e71ff855b808000897bdd587f3aa48c?pvs=4",
+            "https://www.notion.so/Capsule-06-1e71ff855b8080a2b3fbd6920e280809?pvs=4",
+            "https://www.notion.so/Capsule-07-1e71ff855b8080a2b3fbd6920e280810?pvs=4",
+            "https://www.notion.so/Capsule-08-1e71ff855b8080a2b3fbd6920e280811?pvs=4",
+            "https://www.notion.so/Capsule-09-1e71ff855b8080a2b3fbd6920e280812?pvs=4",
+            "https://www.notion.so/Capsule-10-1e71ff855b8080a2b3fbd6920e280813?pvs=4"
+        ];
+        function openRandomCapsule() {
+            const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+            window.location.href = randomUrl;
+        }
+    </script>
 </body>
 </html>
-
