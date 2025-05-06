@@ -6,40 +6,60 @@
   <title>Scent Capsule | 香りくじ体験</title>
   <meta name="robots" content="noindex">
   <style>
-    body {{
+    body {
       background-color: #fff8f0;
       color: #333;
       font-family: "Helvetica Neue", sans-serif;
-      text-align: center;
-      padding: 100px 20px;
-    }}
-    h1 {{
+      padding: 60px 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    h1 {
       font-size: 28px;
       margin-bottom: 20px;
-    }}
-    p {{
+    }
+    p {
       font-size: 16px;
-      color: #777;
-    }}
+      margin-bottom: 40px;
+    }
+    .button {
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .button:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <h1>香りカプセルを開封中...</h1>
-  <p>あなたにぴったりの香りを選んでいます。</p>
+  <div class="container">
+    <h1>香りくじを引いてみよう</h1>
+    <p>今のあなたにぴったりの香りカプセルがひとつ選ばれます。</p>
+    <div class="button" onclick="drawCapsule()">
+      <img src="https://img21.shop-pro.jp/PA01502/089/etc_base64/ueGk6qSvpLik8rD6pKSkxqTfpOs.png?cmsp_timestamp=20250503161404" alt="香りくじを引いてみる">
+    </div>
+  </div>
   <script>
-    const urls = [
-      "https://www.notion.so/Capsule-01-1e71ff855b80800095f0d9db4e0b5aee?pvs=4",
-      "https://www.notion.so/Capsule-02-1e71ff855b8080328642e301d2d475ec?pvs=4",
-      "https://www.notion.so/Capsule-03-1e71ff855b8080f9b9fbd6920e280808?pvs=4",
-      "https://www.notion.so/Capsule-04-1e71ff855b808001803bfd760b9c32f6?pvs=4",
-      "https://www.notion.so/Capsule-05-1e71ff855b808000897bdd587f3aa48c?pvs=4",
-      "https://www.notion.so/Capsule-06-1eb1ff855b8080b58301f6eb75eae2ae?pvs=4",
-      "https://www.notion.so/Capsule-07-1eb1ff855b8080298c53cb2c25798eaf?pvs=4",
-      "https://www.notion.so/Capsule-08-1eb1ff855b808089833aec934193b359?pvs=4",
-      "https://www.notion.so/Capsule-09-1eb1ff855b8080d1b379df38db313d27?pvs=4",
-      "https://www.notion.so/Capsule-10-1eb1ff855b8080e2b774ce03082f5bce?pvs=4"
-    ];
-    window.location.href = urls[Math.floor(Math.random() * urls.length)];
+    function drawCapsule() {
+      const urls = [
+        "https://www.notion.so/Capsule-01-1e71ff855b80800095f0d9db4e0b5aee?pvs=4",
+        "https://www.notion.so/Capsule-02-1e71ff855b8080328642e301d2d475ec?pvs=4",
+        "https://www.notion.so/Capsule-03-1e71ff855b8080f9b9fbd6920e280808?pvs=4",
+        "https://www.notion.so/Capsule-04-1e71ff855b808001803bfd760b9c32f6?pvs=4",
+        "https://www.notion.so/Capsule-05-1e71ff855b808000897bdd587f3aa48c?pvs=4",
+        "https://www.notion.so/Capsule-06-1eb1ff855b8080b58301f6eb75eae2ae?pvs=4",
+        "https://www.notion.so/Capsule-07-1eb1ff855b8080298c53cb2c25798eaf?pvs=4",
+        "https://www.notion.so/Capsule-08-1eb1ff855b808089833aec934193b359?pvs=4",
+        "https://www.notion.so/Capsule-09-1eb1ff855b8080d1b379df38db313d27?pvs=4",
+        "https://www.notion.so/Capsule-10-1eb1ff855b8080e2b774ce03082f5bce?pvs=4"
+      ];
+      const selected = urls[Math.floor(Math.random() * urls.length)];
+      window.location.href = selected;
+    }
   </script>
 </body>
 </html>
